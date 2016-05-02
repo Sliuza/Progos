@@ -1,0 +1,8 @@
+%leds Semaforo1
+ryg 0x21
+ 
+%leds Semaforo2
+ryg 0x22 
+
+%buttons BotaoPainel
+botao 0x10 0x0 P

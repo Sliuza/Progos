@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.Scanner;
+
+
+public class CriadorTestes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int range,tam = 0;
+		Random g = new Random();
+		Scanner l = new Scanner(System.in);
+		tam = 8;
+		range = l.nextInt();
+		System.out.println(tam);
+		for(int i =0;i<2;i++){
+			System.out.println(g.nextInt(range) + " " + g.nextInt(range));
+			System.out.println(g.nextInt(range) + " " + -g.nextInt(range));
+			System.out.println(-g.nextInt(range) + " " + g.nextInt(range));
+			System.out.println(-g.nextInt(range) + " " + -g.nextInt(range));
+			
+		}
+		
+		System.out.println(tam);
+		l.close();
+	}
+
+}

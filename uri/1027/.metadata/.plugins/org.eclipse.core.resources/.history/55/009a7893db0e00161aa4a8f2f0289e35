@@ -1,0 +1,23 @@
+import java.util.*;
+import java.util.Scanner;
+
+
+public class CriadorTestes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int i,j,range,tam = 0;
+		Random gerador = new Random();
+		Scanner l = new Scanner(System.in);
+		List<Integer> n = new ArrayList<Integer>();
+		tam = l.nextInt();
+		range = l.nextInt();
+		
+		
+		System.out.println(tam);
+		l.close();
+	}
+
+}

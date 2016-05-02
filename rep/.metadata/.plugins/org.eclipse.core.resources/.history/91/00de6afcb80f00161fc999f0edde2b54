@@ -1,0 +1,4 @@
+
+public class Laura {
+	Random g = new Random();
+}

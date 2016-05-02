@@ -1,0 +1,18 @@
+import java.util.Random;
+
+
+public class Laura {
+	Random g = new Random();
+	int letra;
+	
+	switch(letra){
+	case 1:
+		System.out.print("");
+		break;
+	case 2:
+		
+	case 3:
+	case 4:
+		
+	}
+}

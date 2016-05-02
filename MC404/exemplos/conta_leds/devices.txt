@@ -1,0 +1,5 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%leds On/Off
+# leds port
+rrrrrrrr 0x20

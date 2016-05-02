@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+
+public class CriadorTestes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int i,j,range,tam = 0;
+		Scanner l = new Scanner(System.in);
+		range = l.nextInt();
+		for(i = 0;i<range;i++){
+			for(j = 0;j<range;j++){
+				System.out.println(i + " " + j);
+				System.out.println(-i + " " + j);
+				System.out.println(i + " " + -j);
+				System.out.println(-i + " " + -j);
+				tam++;
+			}
+		}
+		System.out.println(tam);
+		l.close();
+	}
+
+}

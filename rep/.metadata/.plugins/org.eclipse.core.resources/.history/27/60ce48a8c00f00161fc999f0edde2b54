@@ -1,0 +1,170 @@
+public class Laura {
+	public String retornaPalavra(char letra){
+		double r;
+		String palavra = null;
+		switch(letra){
+		case 'q':
+			//3 letras
+			r = Math.random();
+			if(r<=0.7)
+				palavra+='q';
+			else if(r>0.7 && r<0.85)
+				palavra+='w';
+			else
+				palavra+='a';
+			break;
+		case 'w':	
+			//5 letras
+			r = Math.random();
+			if(r<=0.7)
+				palavra+='w';
+			else if(r>0.7 && r<=0.775)
+				palavra+='q';
+			else if(r>0.775 && r<=0.85)
+				palavra+='e';
+			else if(r>0.85 && r<=0.925)
+				palavra+='a';
+			else
+				palavra+='s';
+			break;
+		case 'e':
+			r = Math.random();
+			if(r<=0.7)
+				palavra+='e';
+			else if(r>0.7 && r<=0.775)
+				palavra+='w';
+			else if(r>0.775 && r<=0.85)
+				palavra+='r';
+			else if(r>0.85 && r<=0.925)
+				palavra+='s';
+			else
+				palavra+='d';
+			break;
+		case 'r':
+			r = Math.random();
+			if(r<=0.7)
+				palavra+='r';
+			else if(r>0.7 && r<=0.775)
+				palavra+='e';
+			else if(r>0.775 && r<=0.85)
+				palavra+='t';
+			else if(r>0.85 && r<=0.925)
+				palavra+='d';
+			else
+				palavra+='f';
+			break;
+		case 't':
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='t';
+			else if(r>0.5 && r<=0.625)
+				palavra+='r';
+			else if(r>0.625 && r<=0.750)
+				palavra+='y';
+			else if(r>750 && r<=0.875)
+				palavra+='g';
+			else
+				palavra+='f';
+			break;
+		case 'y':	
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='y';
+			else if(r>0.5 && r<=0.625)
+				palavra+='t';
+			else if(r>0.625 && r<=0.750)
+				palavra+='u';
+			else if(r>750 && r<=0.875)
+				palavra+='g';
+			else
+				palavra+='h';
+			break;
+		case 'u':
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='u';
+			else if(r>0.5 && r<=0.625)
+				palavra+='y';
+			else if(r>0.625 && r<=0.750)
+				palavra+='i';
+			else if(r>750 && r<=0.875)
+				palavra+='h';
+			else
+				palavra+='j';
+			break;
+		case 'i':	
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='i';
+			else if(r>0.5 && r<=0.625)
+				palavra+='u';
+			else if(r>0.625 && r<=0.750)
+				palavra+='o';
+			else if(r>750 && r<=0.875)
+				palavra+='j';
+			else
+				palavra+='k';
+			break;
+		case 'o':
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='o';
+			else if(r>0.5 && r<=0.625)
+				palavra+='i';
+			else if(r>0.625 && r<=0.750)
+				palavra+='p';
+			else if(r>750 && r<=0.875)
+				palavra+='k';
+			else
+				palavra+='l';
+			break;
+		case 'p':
+			r = Math.random();
+			if(r<=0.5)
+				palavra+='p';
+			else if(r>0.5 && r<0.75)
+				palavra+='o';
+			else
+				palavra+='l';
+			break;
+		case 'a':
+			break;
+		case 's':	
+			break;
+		case 'd':
+			break;
+		case 'f':	
+			break;
+		case 'g':
+			break;
+		case 'h':	
+			break;
+		case 'j':
+			break;
+		case 'k':	
+			break;
+		case 'l':
+			break;
+		case 'ç':	
+			break;
+		case 'z':
+			break;
+		case 'x':	
+			break;
+		case 'c':
+			break;
+		case 'v':	
+			break;
+		case 'b':
+			break;
+		case 'n':	
+			break;
+		case 'm':
+			break;
+			
+		}
+		
+		
+		return "q";
+	}
+}

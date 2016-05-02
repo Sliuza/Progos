@@ -1,0 +1,68 @@
+import java.util.Random;
+
+
+public class Laura {
+	public String retornaPalavra(char letra){
+		Random r; 
+		switch(letra){
+		case 'q':
+			break;
+		case 'w':	
+			break;
+		case 'e':
+			break;
+		case 'r':	
+			break;
+		case 't':
+			break;
+		case 'y':	
+			break;
+		case 'u':
+			break;
+		case 'i':	
+			break;
+		case 'o':
+			break;
+		case 'p':	
+			break;
+		case 'a':
+			break;
+		case 's':	
+			break;
+		case 'd':
+			break;
+		case 'f':	
+			break;
+		case 'g':
+			break;
+		case 'h':	
+			break;
+		case 'j':
+			break;
+		case 'k':	
+			break;
+		case 'l':
+			break;
+		case 'ç':	
+			break;
+		case 'z':
+			break;
+		case 'x':	
+			break;
+		case 'c':
+			break;
+		case 'v':	
+			break;
+		case 'b':
+			break;
+		case 'n':	
+			break;
+		case 'm':
+			break;
+			
+		}
+		
+		
+		return "q";
+	}
+}

@@ -1,0 +1,30 @@
+# arquivo de configuração de dispositivos para o simulador legsim
+
+# dispositivos disponíveis:
+
+##############
+# definição de um painel de displays
+##############
+# inicia com uma linha que começa com "%7segdisplays" seguido do nome do painel (nome da janela deste painel).
+# Cada linha seguinte indica a porta de dados de um display. A primeira linha corresponde
+# à porta do display mais à esquerda do painel, a última linha corresponde à porta do display 
+# mais à direita. 
+%7segdisplays Display
+#port
+0x30
+
+#######
+# definição de um timer
+#######
+# Inicia com uma linha que começa com "%timer".
+# A segunda linha deve conter os parâmetros dataport int 
+#   dataport é o endereço da porta de dados
+#   int é o tipo de interrupção gerada
+# O timer é programado escrevendo o valor do intervalo desejado na porta de dados.
+# Se o valor escrito é zero, o timer é desligado. Caso contrário uma interrupção de tipo int 
+# é gerada a cada vez que o timer chega a zero. O timer é automaticamente reinicializado
+# com o valor programado a cada vez que chega a zero.
+%timer timer
+# parâmetros: dataport int
+0x20 0x12
+

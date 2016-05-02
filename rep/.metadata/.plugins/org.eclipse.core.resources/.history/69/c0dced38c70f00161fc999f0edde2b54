@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+
+public class Main {
+	public static void main(String[] args) {
+		Laura l = new Laura();
+		Scanner s = new Scanner(System.in);
+		System.out.println("Escreva como a Laura");
+		while(true){
+			l.EscreveChapado(s.next().charAt(0));
+		}
+
+	}
+
+}

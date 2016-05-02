@@ -1,0 +1,128 @@
+import java.io.*;
+import java.math.BigInteger;
+import java.util.*;
+public class Main {
+	 public static void main(String[] args) throws IOException {
+		 	List<Integer> eixo = new ArrayList<Integer>();
+		 	List<Integer> x = new ArrayList<Integer>();
+		 	List<Integer> y = new ArrayList<Integer>();
+		 	InputStream is = new FileInputStream("/home/pedro/Documentos/Progos/uri/1027/1027/src/entrada.txt");
+		 	InputStreamReader ir = new InputStreamReader(is);
+	        BufferedReader in = new BufferedReader(ir);
+		 	int N;
+		 	while(in.ready()){
+		 		N = Integer.parseInt(in.readLine());
+		 		while(N>0){
+		 			BigInteger bg = new BigInteger(in.readLine());
+		 			//x.add(linha.indexOf(0));
+		 			//y.add(linha.indexOf(2));
+		 			N--;
+		 		}
+		 		ondaCritica(eixo,x,y);
+		 		limpaListas(eixo,x,y);
+		 		
+		 	}
+		 	in.close();
+	  }
+
+	public static void ondaCritica(List<Integer> eixo,List<Integer> x,List<Integer> y) {
+		int pontos;
+		atualizaEixo(eixo,y);
+		pontos = verificaOnda(eixo,x,y);
+		System.out.println(pontos);
+		
+	}
+
+	private static int verificaOnda(List<Integer> eixo, List<Integer> x,List<Integer> y) {
+		int maior = 0,e = 0,aux = 0;
+		List<Integer> pontos11 = new ArrayList<Integer>();
+		List<Integer> pontos12;
+		List<Integer> pontos21 = new ArrayList<Integer>();;
+		List<Integer> pontos22;
+		while(e!=eixo.size()){
+			for(int i = 0;i<x.size();i++){
+				if(eixo.get(e)+1 == y.get(i)){
+					if(!pontos11.contains(x.get(i)) && x.get(i)!= eixo.get(e)){
+						pontos11.add(x.get(i));
+					}
+				}
+				else if(eixo.get(e)-1 == y.get(i)  && x.get(i)!= eixo.get(e)){
+					if(!pontos21.contains(x.get(i))){
+						pontos21.add(x.get(i));
+					}
+				}
+			}
+			Collections.sort(pontos11);
+			Collections.sort(pontos21);
+			pontos12 = new ArrayList<Integer>(pontos11);
+			pontos22 = new ArrayList<Integer>(pontos21);
+			aux = 1;
+			if( pontos11.size()!=0 && pontos21.size()!=0){
+				int atual,m;	
+				atual = 1;
+				aux = pontoAPonto(atual,pontos11,pontos21);
+				m = aux;			
+				atual = 2;
+			    aux = pontoAPonto(atual,pontos12,pontos22);
+				if(m > aux){
+					aux = m;
+				}
+				if(maior<aux){
+					maior = aux;
+				}
+			}
+			e++;
+			pontos11.clear();
+			pontos12.clear();
+			pontos21.clear();
+			pontos22.clear();
+		}
+			return maior;	
+	}
+		
+
+
+	public static void atualizaEixo(List<Integer> eixo,List<Integer> y) {
+		boolean contem;
+		for(int i = 0;i<y.size();i++){
+			contem = false;
+			contem = eixo.contains(y.get(i));
+			if(!contem){
+				eixo.add(y.get(i));
+				eixo.add(y.get(i)+1);
+				eixo.add(y.get(i)-1);
+			}	
+		}
+		
+	}
+	public static void limpaListas(List<Integer> eixo,List<Integer> x,List<Integer> y){
+		eixo.clear();
+		x.clear();
+		y.clear();
+	}
+	public static int pontoAPonto(int atual,List<Integer> pontos1,List<Integer> pontos2){
+		int aux= 1;
+		while(!pontos2.isEmpty() && !pontos1.isEmpty()){
+			if(atual == 2){	
+				if(pontos2.get(0)<pontos1.get(0)){
+					aux++;
+					pontos2.remove(0);
+					atual = 1;
+				}
+				else
+					break;
+			}
+			else{
+				if(pontos1.get(0)<pontos2.get(0)){
+					aux++;
+					pontos1.remove(0);
+					atual = 2;
+				}	
+				else
+					break;
+			}
+		}	
+			
+		return aux;
+	}
+}
