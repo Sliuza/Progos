@@ -14,8 +14,8 @@ public class CriadorTestes {
 		N = l.nextInt();
 		range = l.nextInt();
 		for(int j = 0;j<N;j++){
-			System.out.println("10");
-			for(int i =0;i<5;i++){
+			System.out.println("1000");
+			for(int i =0;i<500;i++){
 				System.out.println(g.nextInt(range) + " " + g.nextInt(range));
 				System.out.println(g.nextInt(range) + " " + -g.nextInt(range));
 				
